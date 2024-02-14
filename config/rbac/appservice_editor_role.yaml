@@ -12,7 +12,7 @@ metadata:
   name: appservice-editor-role
 rules:
 - apiGroups:
-  - webapp.alainrk.com
+  - kop.alainrk.com
   resources:
   - appservices
   verbs:
@@ -24,7 +24,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - webapp.alainrk.com
+  - kop.alainrk.com
   resources:
   - appservices/status
   verbs:

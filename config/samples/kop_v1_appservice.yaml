@@ -1,4 +1,4 @@
-apiVersion: webapp.alainrk.com/v1
+apiVersion: kop.alainrk.com/v1
 kind: AppService
 metadata:
   labels:

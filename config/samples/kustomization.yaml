@@ -1,4 +1,4 @@
 ## Append samples of your project ##
 resources:
-- webapp_v1_appservice.yaml
+- kop_v1_appservice.yaml
 #+kubebuilder:scaffold:manifestskustomizesamples

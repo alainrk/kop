@@ -16,7 +16,7 @@ resources:
     namespaced: true
   controller: true
   domain: alainrk.com
-  group: webapp
+  group: kop
   kind: AppService
   path: github.com/alainrk/kop/api/v1
   version: v1

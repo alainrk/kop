@@ -31,7 +31,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	webappv1 "github.com/alainrk/kop/api/v1"
+	kopv1 "github.com/alainrk/kop/api/v1"
 	"github.com/alainrk/kop/internal/controller"
 	//+kubebuilder:scaffold:imports
 )
@@ -44,7 +44,7 @@ var (
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
-	utilruntime.Must(webappv1.AddToScheme(scheme))
+	utilruntime.Must(kopv1.AddToScheme(scheme))
 	//+kubebuilder:scaffold:scheme
 }
 

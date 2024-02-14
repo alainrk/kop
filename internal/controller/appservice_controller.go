@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	webappv1 "github.com/alainrk/kop/api/v1"
+	kopv1 "github.com/alainrk/kop/api/v1"
 )
 
 // AppServiceReconciler reconciles a AppService object
@@ -33,9 +33,9 @@ type AppServiceReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=webapp.alainrk.com,resources=appservices,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=webapp.alainrk.com,resources=appservices/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=webapp.alainrk.com,resources=appservices/finalizers,verbs=update
+//+kubebuilder:rbac:groups=kop.alainrk.com,resources=appservices,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=kop.alainrk.com,resources=appservices/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=kop.alainrk.com,resources=appservices/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
@@ -57,6 +57,6 @@ func (r *AppServiceReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 // SetupWithManager sets up the controller with the Manager.
 func (r *AppServiceReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&webappv1.AppService{}).
+		For(&kopv1.AppService{}).
 		Complete(r)
 }
